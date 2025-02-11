@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv05vnqqsim1q"]
+
+[ext_resource type="PackedScene" uid="uid://bmxgsu3phk7sk" path="res://Stages/city/Buildings/BlackSmith/black_smith.tscn" id="1_tx0x4"]
+
+[node name="City" type="Node2D"]
+
+[node name="BlackSmith" parent="." instance=ExtResource("1_tx0x4")]
+position = Vector2(137, 408)
+
+[node name="BlackSmith2" parent="." instance=ExtResource("1_tx0x4")]
+position = Vector2(551, 230)
