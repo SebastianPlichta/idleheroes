@@ -3,6 +3,7 @@ extends Node2D
 class_name collisionComponent
 
 @export var object:Buildings
+@export var menu:UpgradeMenu
 var mouse:bool = false
 var tween:Tween
 
@@ -13,7 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if mouse:
 		if Gfad.click:
-			print("it work again!")
+			menu.showMenu()
 
 func _on_mouse_entered():
 	mouse = true

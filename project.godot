@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Gfad="*res://autoloades/gfad.gd"
 
+[global_group]
+
+upgradeMenus=""
+
 [input]
 
 leftClick={

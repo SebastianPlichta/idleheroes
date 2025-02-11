@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmxgsu3phk7sk"]
+[gd_scene load_steps=5 format=3 uid="uid://bmxgsu3phk7sk"]
 
 [ext_resource type="Script" path="res://Stages/city/Buildings/BlackSmith/black_smith.gd" id="1_phui7"]
 [ext_resource type="PackedScene" uid="uid://c5pnmvo6cksgd" path="res://Stages/city/Buildings/Components/collision_component.tscn" id="2_qy6nv"]
+[ext_resource type="PackedScene" uid="uid://dm7au1len33qq" path="res://UI/buildingsMenu/upgrade_menu.tscn" id="3_w2j6y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyhuq"]
 size = Vector2(271, 182)
@@ -19,5 +20,9 @@ polygon = PackedVector2Array(0, 150, 0, 75, 130, 0, 260, 75, 260, 150)
 position = Vector2(125.5, 81)
 shape = SubResource("RectangleShape2D_vyhuq")
 
-[node name="CollisionComponent" parent="." node_paths=PackedStringArray("object") instance=ExtResource("2_qy6nv")]
+[node name="CollisionComponent" parent="." node_paths=PackedStringArray("object", "menu") instance=ExtResource("2_qy6nv")]
 object = NodePath("..")
+menu = NodePath("../UpgradeMenu")
+
+[node name="UpgradeMenu" parent="." instance=ExtResource("3_w2j6y")]
+position = Vector2(126, -68)
